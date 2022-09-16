@@ -55,6 +55,40 @@ app.get('/login', (req, res) =>{
     })
 });
 
+
+    /*Validacion de ingreso
+app.post('/login', (req, res) => {
+    const { usuario, pass } = req.body;
+    conexion.execute(
+        'SELECT * FROM Usuarios WHERE Usuario = ? AND Pass = ?',
+        [usuario, pass]), 
+     res.render('home', {
+            titulo: ''})
+    }
+);
+*/
+
+    //Validacion de ingreso
+    app.post('/login', (req, res) => {
+        const { usuario, pass } = req.body;
+        let respuesta = []
+        conexion.execute(
+            'SELECT * FROM Usuarios WHERE Usuario = ? AND Pass = ?',
+            [usuario, pass],
+            function(err, result, fields){
+                console.log(result)
+                respuesta = result
+            }
+        )
+        if (respuesta.lenght != 0) 
+            {res.render('home')}
+        else {console.log("fallo")}
+        }
+    );
+    
+
+
+/*
 app.post('/login', (req, res) => {
     const { usuario, pass } = req.body;
     res.render('cargaexitosa', {
@@ -63,7 +97,7 @@ app.post('/login', (req, res) => {
     
         
 if (usuario == '' || pass == '') {
-        let validacion = 'Rellene los campos correctamente.';
+        let validacion = 'Complete los campos para ingresar.';
                 res.render('login', {
                 Titulo: 'Login',
                 validacion
@@ -90,7 +124,7 @@ if (usuario == '' || pass == '') {
         }
         
 });
-
+*/
 
 //6. Defino un indicador de errores
 app.on('error',(error) =>{
