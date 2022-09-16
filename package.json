@@ -1,0 +1,20 @@
+{
+  "coments": "Genero los settings con npm init, npm install express mysql2 nodemailer dotenv path hbs",
+  "name": "nbrwebapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.8",
+    "path": "^0.12.7"
+  }
+}

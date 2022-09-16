@@ -1,0 +1,30 @@
+<body class="text-center">
+    
+<main class="form-signin w-50 m-auto">
+    <div>
+        {{titulo}}
+    </div>
+<form method="post">
+    <img class="mb-4">
+    <h1 class="h3 mb-3 fw-normal">Ingrese sus datos</h1>
+
+    <div class="form-floating">
+        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario">
+        <label for="floatingInput">Usuario</label>
+    </div>
+    <div class="form-floating">
+        <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña">
+        <label for="floatingPassword">Contraseña</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary mt-3" type="Enviar">Ingresar</button>
+</form>
+
+<h2 class="text-danger">
+                {{ validacion }}
+            </h2>
+
+
+</main>
+
+</body>
