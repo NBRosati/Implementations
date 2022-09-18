@@ -1,14 +1,15 @@
+    {{> navbar }}
+
 <div class="container"> 
      <div class="text-center m-5">
             <hr>
             <h2>
-                12345678
+                Profile Information
             </h2>
      </div>
      
      <table class="table">
         <thead>
-            <th>ID_RegF</th>
             <th>CodProfile</th>
             <th>VelMperMin</th>
             <th>DynasMat</th>
@@ -21,7 +22,6 @@
         <tbody>
             {{#each results}}
             <tr>
-                <td>{{ ID_RegF }}</td>
                 <td>{{ CodProfile }}</td>
                 <td>{{ VelMperMin }}</td>
                 <td>{{ DynasMat }}</td>
@@ -35,3 +35,5 @@
      </table>
 
 </div>
+
+   {{> footer }}

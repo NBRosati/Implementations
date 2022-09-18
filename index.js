@@ -45,6 +45,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
+
+
+
 // Seteo el motor de plantilla
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
@@ -54,6 +57,8 @@ hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 
 // Creo rutas para el cliente
+
+
 //LOGIN
 app.get('/login', (req, res) =>{
     res.render('login',{
